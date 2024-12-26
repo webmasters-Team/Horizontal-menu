@@ -1,0 +1,233 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* Scrollbar-effect------- */
+#accordian-horizontal::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+#accordian-horizontal::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+#accordian-horizontal::-webkit-scrollbar-thumb {
+    background: #0089ff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#accordian-horizontal::-webkit-scrollbar-thumb:hover {
+    background: #d5b14c;
+    transition: 0.5s;
+}
+
+
+
+/* --------- */
+body {
+	background: #4EB889;
+	font-family: Nunito, arial, verdana;
+}
+
+@media (min-width: 992px){
+  #accordian-horizontal {
+	background: #fff;
+	width: 100%;
+	float: left;
+}
+
+
+#accordian-horizontal a {
+	
+	
+	
+}
+
+
+
+#accordian-horizontal li {
+	list-style-type: none;
+}
+
+#accordian-horizontal ul li a{
+	color: #9c9c9c;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+/* 	line-height: 34px; */
+	padding: 12px 15px;
+	transition: all 0.15s;
+	position: relative;
+	border-radius: 3px;
+}
+  
+  #accordian-horizontal ul li a i{
+    margin-right: 8px;
+  }
+
+#accordian-horizontal>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a{
+	background-color: #a8d4fb;
+    color: #0089ff;
+    box-shadow: 0px 1px 2px rgba(0, 137, 255, 0.2);
+}
+
+#accordian-horizontal>ul>li {
+	display: inline-block;
+  position:relative;
+  padding: 8px 0px;
+}
+#accordian-horizontal>ul>li>ul>li,
+#accordian-horizontal>ul>li>ul>li>ul>li,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li{
+  width: 100%;
+  position:relative;
+}
+
+
+
+
+#accordian-horizontal>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul {
+	visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 30px;
+  background: #fff;
+  border-radius: 3px;
+  min-width: 200px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3); 
+  transition: 0.3s;
+}
+#accordian-horizontal>ul>li>ul{
+  top: 80px;
+}
+
+
+#accordian-horizontal>ul>li:hover>ul,
+#accordian-horizontal>ul>li>ul>li:hover>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li:hover>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li:hover>ul {
+	visibility: visible;
+  opacity: 1;
+  top: 0px;
+}
+#accordian-horizontal>ul>li:hover>ul{
+  top: 60px;
+}
+
+#accordian-horizontal>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul{
+  left: 100%;
+}
+
+#accordian-horizontal a:not(:only-child):after {
+	  content: "\f105";
+    position: relative;
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#accordian-horizontal .active>a:not(:only-child):after {
+		transform: rotate(90deg);
+}
+
+}
+
+
+@media (max-width: 991px){
+  #accordian-horizontal {
+	background: #fff;
+	width: 250px;
+	padding: 10px;
+	float: left;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+
+#accordian-horizontal a {
+	
+}
+
+#accordian-horizontal li {
+	list-style-type: none;
+}
+
+#accordian-horizontal ul li a{
+	color: #9c9c9c;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	padding: 12px 15px;
+	transition: all 0.15s;
+	position: relative;
+	border-radius: 3px;
+}
+  
+   #accordian-horizontal ul li a i{
+    margin-right: 8px;
+  }
+
+#accordian-horizontal>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a{
+	background-color: #a8d4fb;
+    color: #0089ff;
+    box-shadow: 0px 1px 2px rgba(0, 137, 255, 0.2);
+}
+
+#accordian-horizontal>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul {
+	display: none;
+}
+
+
+#accordian-horizontal>ul>li.active>ul.show-dropdown,
+#accordian-horizontal>ul>li>ul>li.active>ul.show-dropdown,
+#accordian-horizontal>ul>li>ul>li>ul>li.active>ul.show-dropdown,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li.active>ul.show-dropdown {
+	display: block;
+}
+
+#accordian-horizontal>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul,
+#accordian-horizontal>ul>li>ul>li>ul>li>ul>li>ul {
+	padding-left: 20px;
+}
+
+#accordian-horizontal a:not(:only-child):after {
+	content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 15px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#accordian-horizontal .active>a:not(:only-child):after {
+		transform: rotate(90deg);
+}
+}
